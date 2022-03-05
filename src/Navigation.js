@@ -22,22 +22,16 @@ export default function Navigation() {
     full
     light
   >
-  <NavbarBrand to="/Home">
+  <NavbarBrand>
+    <Link to="/Home" element={Home}>
   Beehiver
+  </Link>
   </NavbarBrand>
   <NavbarToggler onClick={function noRefCheck(){}} />
           <Collapse navbar>
             <Nav className="me-auto"
               navbar>
-              <NavItem>
-              <NavItem>
-                <NavLink> 
-                 <Link to="/Home" element={Home}>
-                 Home
-                 </Link>
-                 </NavLink>
-              </NavItem>
-              </NavItem>
+
               <NavItem>
               <NavItem>
                 <NavLink>

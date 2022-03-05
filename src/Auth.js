@@ -2,6 +2,7 @@ import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react'
 import { supabase } from './supabaseClient'
+import { Row, Col, Button, Nav, NavLink, UncontrolledDropdown, NavbarBrand, NavItem, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
 
 export default function Auth() {
   const [loading, setLoading] = useState(false)
@@ -21,10 +22,18 @@ export default function Auth() {
   }
 
   return (
-    <div className="row flex flex-center">
-      <div className="col-6 form-widget">
-        <h1 className="header">Supabase + React</h1>
-        <p className="description">Sign in via magic link with your email below</p>
+    <Container>
+      <Row>
+    <Col className="bg-light border">
+    <Col
+      className="bg-light border" xs="3" >
+    </Col>
+    <Col className="bg-light border" xs="auto" >
+    <h1 className="header">Supabase + React</h1>
+    <p className="description">Sign in via magic link with your email below</p>
+    </Col>
+    <Col className="bg-light border" xs="3" >
+    </Col>
         <div>
           <input
             className="inputField"
@@ -35,7 +44,7 @@ export default function Auth() {
           />
         </div>
         <div>
-          <button
+          <Button color="warning" size="sm"
             onClick={(e) => {
               e.preventDefault()
               handleLogin(email)
@@ -44,9 +53,10 @@ export default function Auth() {
             disabled={loading}
           >
             {loading ? <span>Loading</span> : <span>Send magic link</span>}
-          </button>
+          </Button>
         </div>
-      </div>
-    </div>
+    </Col>
+    </Row>
+    </Container>
   )
 }

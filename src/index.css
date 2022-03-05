@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+  a:link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+
+  }
