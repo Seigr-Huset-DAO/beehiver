@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState }  from "react";
 import Navigation from "./Navigation"
 import Footer from "./Footer"
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Row, Col, Button, Nav, NavLink, UncontrolledDropdown, NavbarBrand, NavItem, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
+import { Row, Col, Button, Nav, NavLink, CardText, CardTitle, Card, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
+import ApiaryRegister from "./ApiaryRegister"
 
 export default function Apiaries() {
+
+  //popup apiary register //
+
+  const [isOpen, setIsOpen] = useState(false);
+ 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+ 
+
+
   return (
     <React.Fragment>
       <Container>
@@ -15,7 +27,30 @@ export default function Apiaries() {
   <br/>
 <h1>Apiaries</h1>
 <br/>
-<p>Here you will be able to  register your apiaries and update beehives. All work done in the beehives can be updated through a simple form. All info will be accesible, downloadable and visualized.</p>
+</div>
+<p>Register your apiary</p>
+
+<div>
+  <Button
+    color="warning"
+    size="sm" value="Register"
+    onClick={togglePopup}
+  >
+    Register
+  </Button>
+
+    {isOpen && <ApiaryRegister
+     content={<>
+      <Card body color="warning" inverse>
+         <CardTitle tag="h5">Register your apiary</CardTitle>
+         <CardText>put the code here</CardText>
+         <Button>Save</Button>
+         </Card>
+      </>}
+      handleClose={togglePopup}
+    />}
+
+
 </div>
 <Footer />
 </Container>
