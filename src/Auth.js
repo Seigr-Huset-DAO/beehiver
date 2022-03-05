@@ -23,17 +23,13 @@ export default function Auth() {
 
   return (
     <Container>
-      <Row>
-    <Col className="bg-light border">
-    <Col
-      className="bg-light border" xs="3" >
-    </Col>
-    <Col className="bg-light border" xs="auto" >
+    <Col>
     <h1 className="header">Supabase + React</h1>
     <p className="description">Sign in via magic link with your email below</p>
     </Col>
-    <Col className="bg-light border" xs="3" >
-    </Col>
+    <Col xs="3" >
+</Col>
+<Col>
         <div>
           <input
             className="inputField"
@@ -43,6 +39,7 @@ export default function Auth() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
+        <br/>
         <div>
           <Button color="warning" size="sm"
             onClick={(e) => {
@@ -56,7 +53,6 @@ export default function Auth() {
           </Button>
         </div>
     </Col>
-    </Row>
     </Container>
   )
 }

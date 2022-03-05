@@ -4,6 +4,7 @@ import Footer from "./Footer"
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Row, Col, Button, Nav, NavLink, UncontrolledDropdown, NavbarBrand, NavItem, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
+import { Outlet, Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -14,7 +15,8 @@ export default function Home() {
     <div id="home">
       <br/>
       <br/>
-      <h1>Beehiver</h1><br/>
+      <h3>Beehiver</h3>
+      
       <container fluid="sm">
         <Row>
           <Col xs="5">
@@ -27,7 +29,7 @@ BeehiveR is an open source project for small scala beekeepers. With this app bee
 <br/>
 <br/>
 <h5>Seigr Huset DAO</h5>
-BeehiveR is the first open source project of the Seigr Huset's Lab. Although the DAO and it's rooms are still in early development, it is already creating the frames for the community to grow. Seigr Huset DAO has a notion workspace https://seigr.notion.site/ Check it for more information about the DAO and its rooms.
+BeehiveR is the first open source project of the Seigr Huset's Lab. Although the DAO and it's rooms are still in early development, it is already creating the frames for the community to grow. Seigr Huset DAO has a notion <Link to="https://seigr.notion.site/">workspace</Link>. Check it for more information about the DAO and its rooms.
 <br/>
 <br/>
 <h5>Want to join the Seigr Huset community?</h5>
@@ -36,8 +38,12 @@ We are looking for adventurous collaborators and community members, contact us a
 
 </Col>
 </Row>
+<br/>
+<br/>
+<br/>
+<Footer />
       </container>
-      <Footer />
+
 
       </div>
       </Container>
