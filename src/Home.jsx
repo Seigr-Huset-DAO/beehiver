@@ -10,7 +10,7 @@ export default function Home() {
     return (
       <React.Fragment>
         
-        <Container fluid>
+        <Container>
 <Navigation />,
 <Col>
 

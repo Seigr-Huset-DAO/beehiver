@@ -23,8 +23,7 @@ export default function Auth() {
 
   return (
     <Container>
-    <Col>
-    <h1 className="header">Sign in</h1>
+    <h3 className="header">Sign in</h3>
     <p className="description">Sign in via magic link with your email below</p>
 
         <div>
@@ -49,7 +48,6 @@ export default function Auth() {
             {loading ? <span>Loading</span> : <span>Send magic link</span>}
           </Button>
         </div>
-    </Col>
     </Container>
   )
 }

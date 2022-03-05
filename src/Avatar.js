@@ -1,6 +1,7 @@
 import './index.css'
 import { useEffect, useState } from 'react'
 import { supabase } from './supabaseClient'
+import { Row, Col, Button, Nav, NavLink, UncontrolledDropdown, NavbarBrand, NavItem, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
 
 export default function Avatar({ url, size, onUpload }) {
   const [avatarUrl, setAvatarUrl] = useState(null)
@@ -54,6 +55,7 @@ export default function Avatar({ url, size, onUpload }) {
   }
 
   return (
+    <Container>
     <div>
       {avatarUrl ? (
         <img
@@ -67,7 +69,7 @@ export default function Avatar({ url, size, onUpload }) {
       )}
       <div style={{ width: size }}>
         <label className="button primary block" htmlFor="single">
-          {uploading ? 'Uploading ...' : 'Upload'}
+          {uploading ? 'Uploading ...' : 'Upload avatar'}
         </label>
         <input
           style={{
@@ -82,5 +84,6 @@ export default function Avatar({ url, size, onUpload }) {
         />
       </div>
     </div>
+    </Container>
   )
 }
