@@ -12,6 +12,8 @@ export default function Home() {
         
         <Container fluid>
 <Navigation />,
+<Col>
+
     <div id="home">
       <br/>
       <br/>
@@ -38,6 +40,7 @@ We are looking for adventurous collaborators and community members, contact us a
 
 </Col>
 </Row>
+
 <br/>
 <br/>
 <br/>
@@ -46,6 +49,8 @@ We are looking for adventurous collaborators and community members, contact us a
 
 
       </div>
+      </Col>
+
       </Container>
     </React.Fragment>
     );

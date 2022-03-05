@@ -22,12 +22,8 @@ export default function Login() {
 
 <Container>
     <Row>
-    <Col
-      className="bg-light border"
-      xs="6"
-    >
+    <Col xs="6">
       {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
-
      </Col>
      </Row>
      </Container>

@@ -24,12 +24,9 @@ export default function Auth() {
   return (
     <Container>
     <Col>
-    <h1 className="header">Supabase + React</h1>
+    <h1 className="header">Sign in</h1>
     <p className="description">Sign in via magic link with your email below</p>
-    </Col>
-    <Col xs="3" >
-</Col>
-<Col>
+
         <div>
           <input
             className="inputField"
