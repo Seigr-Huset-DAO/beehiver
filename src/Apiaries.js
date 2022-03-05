@@ -26,17 +26,18 @@ export default function Apiaries() {
   <br/>
   <br/>
 <h1>Apiaries</h1>
-<br/>
+
 </div>
-<p>Register your apiary</p>
+<p>Register a new apiary or check your registered ones.</p>
 
 <div>
+
   <Button
     color="warning"
     size="sm" value="Register"
     onClick={togglePopup}
   >
-    Register
+    Register new apiary
   </Button>
 
     {isOpen && <ApiaryRegister
@@ -44,7 +45,12 @@ export default function Apiaries() {
       <Card body color="warning" inverse>
          <CardTitle tag="h5">Register your apiary</CardTitle>
          <CardText>put the code here</CardText>
-         <Button>Save</Button>
+         <Row xs="2">
+           <Col>
+            <Button>Cancel</Button> {   }
+            <Button>Save</Button>
+            </Col>
+         </Row>
          </Card>
       </>}
       handleClose={togglePopup}
