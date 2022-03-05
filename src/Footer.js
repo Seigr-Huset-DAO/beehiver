@@ -3,9 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, NavLink, NavbarBrand, NavItem, NavbarText } from 'reactstrap';
 import React from 'react'
 import { Container } from 'reactstrap'
-import { Route, HashRouter,
+import { Link, Route, HashRouter,
     NavLink as RRNavLink } from "react-router-dom"
-  
+import Home from "./Home";
+      
 function Footer() {
   return (
     <div>
@@ -19,9 +20,12 @@ function Footer() {
     full
     light
   >
-    <NavbarBrand to="/" tag={RRNavLink}>
-      BeehiveR
-    </NavbarBrand>
+  <NavbarBrand>
+    <Link to="/Home" element={Home}>
+  Beehiver
+  </Link>
+  </NavbarBrand>
+
 
       <NavbarText>
         Developed at the Seigr Huset's Lab
