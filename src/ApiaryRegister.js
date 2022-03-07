@@ -17,7 +17,7 @@ const Apiaries = () => {
       <Alert color="warning">
     <div className="Apiaries-card">
       <div className="App-header">
-        <h3><GiBeehive style={{ position: "relative", top: "0.5rem", paddingRight: "0.25rem" }} />Register a new apiary</h3>
+        <h3><GiBeehive style={{ position: "relative", top: "-0.1rem", paddingRight: "0.25rem" }} />Register a new apiary</h3>
       </div>
       <ApiariesAdd />
       <div className="List-view">

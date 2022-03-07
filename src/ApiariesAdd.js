@@ -12,15 +12,31 @@ const ApiariesAdd = () => {
     event.preventDefault();
     if (apiary_name === '') return;
   };
+
+    //popup apiary register //
+
+    const [isOpen, setIsOpen] = useState(false);
+ 
+    const togglePopup = () => {
+      setIsOpen(!isOpen);
+    }
+
+    
+
   return (
       <Container>
     <Form className="Input-container">
-
+        <FormGroup row>
+        <Col sm={5}>
       <Input className="Input-field App-border-radius" placeholder="Apiary's name" type="text" value={apiary_name} onChange={(e) => setApiary_name(e.target.value)} />
-
+       </Col>
+       </FormGroup>
+       
       <FormGroup>
+      <FormGroup row>
+        <Col sm={5}>
     <Label for="beehives_nr">
-      Select
+      How many beehives has this apiary?
     </Label>
     <Input
     className="Input-field App-border-radius" placeholder="Beehives number" value={beehives_nr} onChange={(e) => setApiary_name(e.target.value)}
@@ -59,12 +75,19 @@ const ApiariesAdd = () => {
         10
       </option>
     </Input>
+    </Col>
+       </FormGroup>
   </FormGroup>
 
-      <Input className="Input-field App-border-radius" placeholder="Established" type="date" value={established} onChange={(e) => setApiary_name(e.target.value)} />
-
+  <FormGroup row>
+        <Col sm={5}>
+      <Label className="Input-field App-border-radius" placeholder="Established" type="date">When was this apiary established?</Label> <Input value={established} onChange={(e) => setApiary_name(e.target.value)} />
+      </Col>
+      </FormGroup>
 <br/>
-      <Button color="warning" outline type="submit" onClick={onSubmit} className="App-button Add-button App-border-radius">Add <IoMdAddCircleOutline size={20} style={{ verticalAlign: "middle" }} /></Button>
+      <Button color="warning" outline type="submit" onClick={onSubmit} className="App-button Add-button App-border-radius">Add <IoMdAddCircleOutline size={20} style={{ verticalAlign: "middle" }} /></Button>        {  }
+
+      <Button color="warning" outline type="submit"     onClick={togglePopup} className="App-button Add-button App-border-radius">Cancel</Button>
 
     </Form>
     </Container>

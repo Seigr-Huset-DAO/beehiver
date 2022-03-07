@@ -42,16 +42,6 @@ export default function Apiaries() {
 
     {isOpen && <ApiaryRegister
      content={<>
-      <Card body color="warning" inverse>
-         <CardTitle tag="h5">Register your apiary</CardTitle>
-         <CardText>put the code here</CardText>
-         <Row xs="2">
-           <Col>
-            <Button onClick={togglePopup}>Cancel</Button> {   }
-            <Button>Save</Button>
-            </Col>
-         </Row>
-         </Card>
       </>}
       handleClose={togglePopup}
     />}
