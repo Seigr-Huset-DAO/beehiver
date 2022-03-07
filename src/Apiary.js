@@ -47,7 +47,7 @@ export default function Apiaries() {
          <CardText>put the code here</CardText>
          <Row xs="2">
            <Col>
-            <Button>Cancel</Button> {   }
+            <Button onClick={togglePopup}>Cancel</Button> {   }
             <Button>Save</Button>
             </Col>
          </Row>

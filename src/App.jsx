@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Outlet, Link } from 'react-router-dom';
 import Home from "./Home";
 import User from "./User";
-import Apiaries from "./Apiaries";
+import Apiary from "./Apiary";
 import { Navbar, NavbarToggler, Collapse, Nav, NavLink, UncontrolledDropdown, NavbarBrand, NavItem, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
 
 
@@ -48,7 +48,7 @@ Beehiver
             </NavItem>
               <NavItem>
               <NavLink>
-                <Link to="/Apiaries" element={Apiaries}>
+                <Link to="/Apiary" element={Apiary}>
                 Apiaries
                 </Link>
               </NavLink>

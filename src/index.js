@@ -7,7 +7,7 @@ import {
 import App from "./App";
 import Home from "./Home"
 import User from "./User";
-import Apiaries from "./Apiaries";
+import Apiary from "./Apiary";
 
 const rootElement = document.getElementById("root");
 render(
@@ -16,7 +16,7 @@ render(
       <Route path="/" element={<App />} />
       <Route path="Home" element={<Home />} />
       <Route path="User" element={<User />} />
-      <Route path="Apiaries" element={<Apiaries />} />
+      <Route path="Apiary" element={<Apiary />} />
     </Routes>
   </BrowserRouter>,
   rootElement
