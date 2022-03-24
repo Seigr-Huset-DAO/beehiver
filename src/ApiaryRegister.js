@@ -7,6 +7,8 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ApiariesAdd from "./ApiariesAdd"
 import { Alert, Row, Col, Button, Nav, NavLink, CardText, CardTitle, Card, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 const Apiaries = () => {
   const [count] = useState(0);
@@ -14,6 +16,11 @@ const Apiaries = () => {
 
   return (
     <Container>
+      <Navigation />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <Alert color="warning">
     <div className="Apiaries-card">
       <div className="App-header">
@@ -27,6 +34,7 @@ const Apiaries = () => {
       </div>
     </div>
     </Alert>
+    <Footer />
     </Container>
   );
 }

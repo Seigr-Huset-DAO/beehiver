@@ -5,6 +5,7 @@ import { Outlet, Link } from 'react-router-dom';
 import Home from "./Home";
 import User from "./User";
 import Apiary from "./Apiary";
+import ApiaryRegister from "./ApiaryRegister"
 import { Navbar, NavbarToggler, Collapse, Nav, NavLink, UncontrolledDropdown, NavbarBrand, NavItem, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
 
 
@@ -41,13 +42,6 @@ export default function Navigation() {
                  </NavLink>
               </NavItem>
               </NavItem>
-                <NavItem>
-                <NavLink>
-                  <Link to="/Apiary" element={Apiary}>
-                  Apiaries
-                  </Link>
-                </NavLink>
-              </NavItem>
               <UncontrolledDropdown
                 inNavbar
                 nav
@@ -56,15 +50,17 @@ export default function Navigation() {
                   caret
                   nav
                 >
-                  Seigr Huset DAO
+                  Apiaries
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    DAO's webpage
+                  <Link to="/ApiaryRegister" element={ApiaryRegister}>
+                    Register new apiary
+                    </Link>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    The Lab
+                    View registered apiaries
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

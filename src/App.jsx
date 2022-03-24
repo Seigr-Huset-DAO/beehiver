@@ -5,84 +5,43 @@ import { Outlet, Link } from 'react-router-dom';
 import Home from "./Home";
 import User from "./User";
 import Apiary from "./Apiary";
-import { Navbar, NavbarToggler, Collapse, Nav, NavLink, UncontrolledDropdown, NavbarBrand, NavItem, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
-
+import { Col, Row, Navbar, NavbarToggler, Collapse, Nav, NavLink, UncontrolledDropdown, NavbarBrand, NavItem, Container, DropdownToggle, DropdownItem, NavbarText,DropdownMenu } from 'reactstrap';
+import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 export default function App() {
   return (
-  <div id="menu">
-        <nav>
-        <Container>
+    <React.Fragment>
+        
+    <Container>
+<Navigation />,
+<Col>
 
-<Navbar
-  color="warning"
-  expand="md"
-  fixed="top"
-  full
-  light
->
-<NavbarBrand to="/Home">
-Beehiver
-</NavbarBrand>
-<NavbarToggler onClick={function noRefCheck(){}} />
-        <Collapse navbar>
-          <Nav className="me-auto"
-            navbar>
-            <NavItem>
-            <NavItem>
-              <NavLink> 
-               <Link to="/Home" element={Home}>
-               Home
-               </Link>
-               </NavLink>
-            </NavItem>
-            </NavItem>
-            <NavItem>
-            <NavItem>
-              <NavLink>
-                <Link to="/User" element={User}>
-               User
-               </Link>
-               </NavLink>
-            </NavItem>
-            </NavItem>
-              <NavItem>
-              <NavLink>
-                <Link to="/Apiary" element={Apiary}>
-                Apiaries
-                </Link>
-              </NavLink>
-            </NavItem>
-            <UncontrolledDropdown
-              inNavbar
-              nav
-            >
-              <DropdownToggle
-                caret
-                nav
-              >
-                Seigr Huset DAO
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  DAO's webpage
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  The Lab
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>
-            put hello user name here
-          </NavbarText>
-        </Collapse>
-        </Navbar>
-      </Container>
+<div id="home">
+  <br/>
+  <br/>
+  <h3>Beehiver</h3>
+  
+  <container fluid="sm">
+    <Row>
+      <Col xs="5">
+      <h5>Welcome to BeehiveR</h5>
 
-        </nav>
-        <Outlet />
-    </div>
-  );
+
+</Col>
+</Row>
+
+<br/>
+<br/>
+<br/>
+<Footer />
+  </container>
+
+
+  </div>
+  </Col>
+
+  </Container>
+</React.Fragment>
+);
 }
